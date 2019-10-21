@@ -21,41 +21,46 @@
 
 def question2():
     answerDiscount = 0.9
-    answerNoise = 0
+    answerNoise = 0 # Set to 0
     return answerDiscount, answerNoise
 
 def question3a():
-    answerDiscount = None
-    answerNoise = None
-    answerLivingReward = None
+    ### Give high cost per move and no noise ###
+    answerDiscount = 0.5
+    answerNoise = 0
+    answerLivingReward = -5 
     return answerDiscount, answerNoise, answerLivingReward
     # If not possible, return 'NOT POSSIBLE'
 
 def question3b():
-    answerDiscount = None
-    answerNoise = None
-    answerLivingReward = None
+    ### Add noise to avoid the cliff, decrease discount to encourage agent try new long way ###
+    answerDiscount = 0.2
+    answerNoise = 0.2
+    answerLivingReward = -1
     return answerDiscount, answerNoise, answerLivingReward
     # If not possible, return 'NOT POSSIBLE'
 
 def question3c():
-    answerDiscount = None
-    answerNoise = None
-    answerLivingReward = None
+    ### Give chance to find 10 ###
+    answerDiscount = 0.8
+    answerNoise = 0
+    answerLivingReward = 0
     return answerDiscount, answerNoise, answerLivingReward
     # If not possible, return 'NOT POSSIBLE'
 
 def question3d():
-    answerDiscount = None
-    answerNoise = None
-    answerLivingReward = None
+    ### Give risk to advoid the cliff ###
+    answerDiscount = 0.9
+    answerNoise = 0.2
+    answerLivingReward = 0
     return answerDiscount, answerNoise, answerLivingReward
     # If not possible, return 'NOT POSSIBLE'
 
 def question3e():
-    answerDiscount = None
-    answerNoise = None
-    answerLivingReward = None
+    ### Give reward per move more than exit and no risk ###
+    answerDiscount = 0.9
+    answerNoise = 0
+    answerLivingReward = 11
     return answerDiscount, answerNoise, answerLivingReward
     # If not possible, return 'NOT POSSIBLE'
 
