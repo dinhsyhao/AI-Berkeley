@@ -45,14 +45,16 @@ class ValueIterationAgent(ValueEstimationAgent):
 
         # Write value iteration code here
         "*** YOUR CODE HERE ***"
-        for i in range(self.iterations): # every k
-            updatedValues = self.values.copy()  # to use batch-version of MDP , hard copy the values
-
+        for i in range(self.iterations):
+            ### Initial 0 for batch learning ###
+            updatedValues = self.values.copy() # copy to advoid online learning
             for state in self.mdp.getStates():
 
+                ### Exit at terminal state ###
                 if self.mdp.isTerminal(state):
                     continue
 
+                ### update optimal value for state
                 actions = self.mdp.getPossibleActions(state)
                 optimal = max([self.getQValue(state,action) for action in actions])
                 updatedValues[state] = optimal
