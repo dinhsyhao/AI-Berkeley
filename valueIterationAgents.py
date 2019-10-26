@@ -96,6 +96,8 @@ class ValueIterationAgent(ValueEstimationAgent):
           terminal state, you should return None.
         """
         "*** YOUR CODE HERE ***"
+
+        ### Terminal state ###
         if (self.mdp.isTerminal(state)):
             return None
         
